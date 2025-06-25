@@ -81,57 +81,50 @@
 
     /*Carusel*/
 
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .carousel-container {
-        position: relative;
-        width: 100%;
-        max-height: 1000px;
-        overflow: hidden;
-    }
+.hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 
-    .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+}
 
-    .carousel-item {
-        min-width: 100%;
-        flex-shrink: 0;
-    }
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #b82727;
+  text-shadow: 0 0 10px #000;
+  margin-bottom: 15px;
+}
 
-    .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+.hero-overlay p {
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 0 0 6px #000;
+}
 
-    .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.4);
-        color: white;
-        border: none;
-        font-size: 30px;
-        padding: 10px 15px;
-        cursor: pointer;
-        z-index: 10;
-        transition: background 0.3s ease;
-        border-radius: 50%;
-    }
-
-    .carousel-btn:hover {
-        background: rgba(0, 0, 0, 0.8);
-    }
-
-    .carousel-btn.left {
-        left: 15px;
-    }
-
-    .carousel-btn.right {
-        right: 15px;
-    }
 
 
 
@@ -603,7 +596,7 @@
     .rutina-card {
         min-height: auto;
         width: 100%;
-        height: 800px; 
+        height: 550px; 
         max-width: 400px; 
         margin: 0 auto;
         box-sizing: border-box;
@@ -612,15 +605,14 @@
 
     .borde {
         width: 100%;
-        max-width: 500px; /* un poco más que la card */
+        max-width: 600px; /* un poco más que la card */
         margin: 0 auto;
         box-sizing: border-box;
     }
 
     .rutina-card img {
         width: 100%;
-        height: 600px;
-        object-fit: cover;
+        height: 400px;
         border-radius: 12px;
     }
 
