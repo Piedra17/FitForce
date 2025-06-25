@@ -1,178 +1,213 @@
-* {
-    list-style: none;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-
-/* HEADER */
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: transparent; 
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-    z-index: 1000;
-}
-
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* NAV */
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu li {
-    position: relative;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    display: block;
-    font-size: 20px;
-}
-
-/* DROPDOWN */
-.nav-menu li:hover .dropdown {
-    display: block;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 38px;
-    left: 0;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    min-width: 160px;
-    border-radius: 4px;
-    background: rgba(251, 18, 18, 0.359);
-}
-
-.dropdown li a {
-    padding: 10px 15px;
-}
-
-
-
-.dropdown li a:hover::before {
-    left: 125%;
-}
-
-.dropdown li a:hover {
-    background: rgba(255, 0, 0, 0.6);
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
-}
-
-/* Carrusel */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.4s ease;
-    height: 1200px;
-}
-
-.carousel-item {
-    min-width: 100%;
-    height: 100%;
-}
-
-.carousel-item img {
-    width: 100%;
-    display: block;
-    object-fit: contain;
-    display: block;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-btn.left {
-    left: 10px;
-}
-
-.carousel-btn.right {
-    right: 10px;
-}
-
-
-
-/* carrucel marcas*/
-.carrusel-auto {
-    width: 100%;
-    overflow: hidden;
-    padding: 30px 0;
-}
-
-.carrusel-auto h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.carrusel-pista {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.productos {
-    display: flex;
-    gap: 20px;
-    animation: deslizar 30s linear infinite;
-}
-
-.producto {
-    min-width: 200px;
-    height: 250px;
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.producto img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-@keyframes deslizar {
-    0% {
-        transform: translateX(0);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        font-family: sans-serif;
     }
 
-    100% {
-        transform: translateX(-50%);
+    body {
+        font-family: sans-serif;
     }
-}
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 20px;
+        z-index: 1000;
+        backdrop-filter: blur(5px); /* efecto tipo vidrio */
+    }
+
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+        display: none;
+        background: none;
+        font-size: 28px;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .nav-menu li .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #444;
+        padding: 10px;
+        list-style: none;
+        border-radius: 5px;
+    }
+    .nav-menu li:hover .dropdown {
+        display: block;
+    }
+
+    .nav-menu li .dropdown li a {
+        display: block;
+        color: white;
+        padding: 5px 10px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .nav-menu li .dropdown li a:hover {
+        background-color: #666;
+    }
+
+
+     /*Carusel*/
+
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.4s ease;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 30px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .carousel-btn.left {
+        left: 10px;
+    }
+
+    .carousel-btn.right {
+        right: 10px;
+    }
+
+
+    .carrusel-auto {
+        width: 100%;
+        overflow: hidden;
+        padding: 30px 0;
+    }
+
+    .carrusel-auto h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .carrusel-pista {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .productos {
+        display: flex;
+        gap: 20px;
+        animation: deslizar 30s linear infinite;
+        overflow: hidden;
+        /* Opcional para que no interfiera el toque mientras anima */
+        /* pointer-events: none; */
+    }
+
+    .producto {
+        min-width: 200px;
+        height: 250px;
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+    }
+
+    .producto img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Animación */
+    @keyframes deslizar {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            background: #333;
+            padding: 10px;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            height: 900px;
+        }
+
+
+        .producto {
+            min-width: 150px;
+            height: auto;
+            padding: 5px;
+        }
+
+        .producto img {
+            height: 150px;
+            object-fit: contain;
+        }
+    }
