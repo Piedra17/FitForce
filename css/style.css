@@ -534,3 +534,138 @@
             height: 100px;
         }
     }
+
+@media (max-width: 500px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        align-self: flex-end;
+    }
+
+    .nav-menu li a {
+        font-size: 16px;
+    }
+
+    /* CAROUSEL */
+    .carrusel-container {
+    max-width: 900px;  /* o el ancho que quieras para el carrusel */
+    margin: 0 auto;    /* centra el contenedor horizontalmente */
+    overflow: hidden;  /* para que no se vea scroll horizontal no deseado */
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center; /* centra los items si hay espacio */
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 50%;
+    max-width: 100%;
+    height: 800px;
+    object-fit: contain;
+}
+
+    /* RUTINAS */
+    .rutinas-banner h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .rutinas-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 10px;
+        max-width: 100%; 
+    }
+
+    .rutina-card {
+        min-height: auto;
+        width: 100%;
+        height: 800px; 
+        max-width: 400px; 
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+    }
+
+    .borde {
+        width: 100%;
+        max-width: 500px; /* un poco más que la card */
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .rutina-card img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .rutina-card h3 {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .rutina-card p {
+        padding: 0 10px;
+    }
+
+    .rutina-card a {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 10px 20px 10px;
+    }
+
+    /* TIPS */
+    .seccion-tips h2 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .acordeon-titulo {
+        font-size: 18px;
+        padding: 14px 16px;
+    }
+
+    .acordeon-contenido ul {
+        padding: 10px 0;
+        margin: 0 10px;
+    }
+
+    /* CARRUSEL MARCAS */
+    .productos {
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .producto {
+        min-width: 100px;
+    }
+
+    .producto img {
+        height: 80px;
+    }
+}
