@@ -8,7 +8,7 @@
     }
 
     body {
-        background-color: black;
+        background-color: rgb(60, 60, 60);
     }
 
     header {
@@ -20,22 +20,29 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 25px 20px;
+        padding: 25px 200px;
         z-index: 1000;
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(35px);
+        /* desenfoque elegante */
+        -webkit-backdrop-filter: blur(35px);
+        /* compatibilidad con Safari */
+        height: 120px;
         /* efecto tipo vidrio */
     }
 
-
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
 
     .nav-menu {
         display: flex;
         gap: 20px;
     }
+
+    /* CSS en tu style.css o dentro de <style> */
+    .heade.scrolled {
+        background-color: rgba(0, 0, 0, 0.85);
+        /* O el color que necesites */
+        transition: background-color 0.5s ease;
+    }
+
 
     /* Botón hamburguesa */
     .menu-toggle {
@@ -79,53 +86,55 @@
     }
 
 
+
     /*Carusel*/
 
-.hero-video {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
+    .hero-video {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
 
-.hero-video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
+    .hero-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        filter: brightness(60%) contrast(110%) saturate(120%);
+    }
 
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  width: 100%;
-}
+    .hero-overlay {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+    }
 
-.hero-overlay h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #b82727;
-  text-shadow: 0 0 10px #000;
-  margin-bottom: 15px;
-}
-
-.hero-overlay p {
-  font-size: 1.4rem;
-  color: #fff;
-  text-shadow: 0 0 6px #000;
-}
-
-
+    .hero-overlay h1 {
+        font-family: 'Tourney', sans-serif;
+        font-size: 100px;
+        font-weight: 100;
+        color: transparent;
+        /* Elimina el relleno */
+        -webkit-text-stroke: 1px #fff;
+        /* Solo borde blanco */
+        text-shadow: none;
+        /* Asegúrate de que no haya sombra que lo haga parecer relleno */
+        background: none;
+        -webkit-font-smoothing: antialiased;
+        /* Mejora visual del trazo */
+        margin-bottom: 15px;
+    }
 
 
     /*Cards rutinas*/
@@ -137,7 +146,14 @@
     }
 
     .rutinas-banner h2 {
-        font-size: 32px;
+        font-family: 'Tourney', sans-serif;
+        font-size: 40px;
+        color: transparent;
+        font-weight: 100;
+        -webkit-text-stroke: 1px #fff;
+        text-shadow: none;
+        background: none;
+        margin-bottom: 15px;
         margin-bottom: 40px;
     }
 
@@ -255,8 +271,12 @@
     }
 
     .seccion-tips h2 {
-        font-size: 36px;
-        color: blue;
+        font-size: 40px;
+        color: transparent;
+        font-family: 'Tourney', sans-serif;
+        font-weight: 900;
+        -webkit-text-stroke: 1px #fff;
+        text-shadow: none;
         margin-bottom: 50px;
     }
 
@@ -308,6 +328,83 @@
     }
 
 
+    /* Calendario */
+
+
+    .calen {
+        position: relative;
+        width: 100%;
+        height: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background: url(../fotos/banner/fondo_calen.jpg) no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .calen::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .calen * {
+        position: relative;
+        z-index: 2;
+        /* Asegura que el contenido esté sobre el filtro */
+    }
+
+
+    .calendar-container {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+
+    #calendar {
+        max-width: 900px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        min-width: 300px;
+    }
+
+    #event-details {
+        background: #1e1e1e;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+        min-height: 500px;
+        font-size: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        flex-shrink: 0;
+    }
+
+    .texto_calendario {
+        text-align: center;
+        color: transparent;
+        font-family: 'Tourney', sans-serif;
+        font-weight: 900;
+        -webkit-text-stroke: 1px #fff;
+        text-shadow: none;
+        font-size: 50px;
+    }
+
 
 
 
@@ -340,59 +437,96 @@
         overflow: hidden;
     }
 
-    /* Estructura CARD personalizada 
-.card {
-    position: relative;
-    width: 200px;
-    height: 250px;
-    border-radius: 14px;
-    z-index: 1111;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-shrink: 0;
-}
+    .contact-section {
+        padding: 60px 20px;
+        background: #fff;
+        position: relative;
+        z-index: 10;
+    }
 
-.card img {
-    width: 90%;
-    height: auto;
-    z-index: 3;
-    position: relative;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+    .contact-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
 
+    .cta-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: #222;
+    }
 
-.bg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 190px;
-    height: 240px;
-    z-index: 2;
-    background: rgba(255, 255, 255, .95);
-    backdrop-filter: blur(24px);
-    border-radius: 10px;
-    overflow: hidden;
-    outline: 2px solid white;
-}
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #555;
+    }
 
-.blob {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ff0000;
-    opacity: 1;
-    filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
-}*/
+    .btn-cta {
+        background: #007BFF;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .btn-cta:hover {
+        background: #0056b3;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #007BFF;
+        outline: none;
+    }
+
+    .contact-form button {
+        background: #28a745;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background: #1e7e34;
+    }
+
+    /* Animaciones */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 
     /* Animación carrusel */
     @keyframes deslizar {
@@ -456,13 +590,50 @@
         }
 
         /* CAROUSEL */
-        .carousel-item img {
-            height: 900px;
-            margin: 0 auto;
-            width: 800px;
-            margin-top: 70px;
-            object-fit: fill;
+
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
         }
+
+        .hero-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            width: 100%;
+        }
+
+        .hero-overlay h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #b82727;
+            text-shadow: 0 0 10px #000;
+            margin-bottom: 15px;
+        }
+
+        .hero-overlay p {
+            font-size: 1.4rem;
+            color: #fff;
+            text-shadow: 0 0 6px #000;
+        }
+
 
         /* RUTINAS */
         .rutinas-banner h2 {
@@ -486,7 +657,7 @@
             margin: 0 auto;
         }
 
-        .borde{
+        .borde {
             width: 510px;
             margin: 0 auto;
         }
@@ -528,136 +699,141 @@
         }
     }
 
-@media (max-width: 500px) {
+    @media (max-width: 500px) {
 
-    /* HEADER */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 10px;
+        /* HEADER */
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px 10px;
+        }
+
+        .logo {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .menu-toggle {
+            align-self: flex-end;
+        }
+
+        .nav-menu li a {
+            font-size: 16px;
+        }
+
+        /* CAROUSEL */
+        .carrusel-container {
+            max-width: 900px;
+            /* o el ancho que quieras para el carrusel */
+            margin: 0 auto;
+            /* centra el contenedor horizontalmente */
+            overflow: hidden;
+            /* para que no se vea scroll horizontal no deseado */
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            justify-content: center;
+            /* centra los items si hay espacio */
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-item img {
+            width: 50%;
+            max-width: 100%;
+            height: 800px;
+            object-fit: contain;
+        }
+
+        /* RUTINAS */
+        .rutinas-banner h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+
+        .rutinas-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 0 10px;
+            max-width: 100%;
+        }
+
+        .rutina-card {
+            min-height: auto;
+            width: 100%;
+            height: 550px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+        }
+
+        .borde {
+            width: 100%;
+            max-width: 600px;
+            /* un poco más que la card */
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .rutina-card img {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+        }
+
+        .rutina-card h3 {
+            font-size: 18px;
+            padding: 0 10px;
+        }
+
+        .rutina-card p {
+            padding: 0 10px;
+        }
+
+        .rutina-card a {
+            padding: 8px 16px;
+            font-size: 14px;
+            margin: 0 10px 20px 10px;
+        }
+
+        /* TIPS */
+        .seccion-tips h2 {
+            font-size: 24px;
+            padding: 0 10px;
+        }
+
+        .acordeon-titulo {
+            font-size: 18px;
+            padding: 14px 16px;
+        }
+
+        .acordeon-contenido ul {
+            padding: 10px 0;
+            margin: 0 10px;
+        }
+
+        /* CARRUSEL MARCAS */
+        .productos {
+            gap: 10px;
+            padding-left: 10px;
+        }
+
+        .producto {
+            min-width: 100px;
+        }
+
+        .producto img {
+            height: 80px;
+        }
     }
-
-    .logo {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .menu-toggle {
-        align-self: flex-end;
-    }
-
-    .nav-menu li a {
-        font-size: 16px;
-    }
-
-    /* CAROUSEL */
-    .carrusel-container {
-    max-width: 900px;  /* o el ancho que quieras para el carrusel */
-    margin: 0 auto;    /* centra el contenedor horizontalmente */
-    overflow: hidden;  /* para que no se vea scroll horizontal no deseado */
-    position: relative;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    justify-content: center; /* centra los items si hay espacio */
-}
-
-.carousel-item {
-    min-width: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-item img {
-    width: 50%;
-    max-width: 100%;
-    height: 800px;
-    object-fit: contain;
-}
-
-    /* RUTINAS */
-    .rutinas-banner h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-        padding: 0 10px;
-    }
-
-    .rutinas-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 0 10px;
-        max-width: 100%; 
-    }
-
-    .rutina-card {
-        min-height: auto;
-        width: 100%;
-        height: 550px; 
-        max-width: 400px; 
-        margin: 0 auto;
-        box-sizing: border-box;
-        padding-bottom: 20px;
-    }
-
-    .borde {
-        width: 100%;
-        max-width: 600px; /* un poco más que la card */
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-
-    .rutina-card img {
-        width: 100%;
-        height: 400px;
-        border-radius: 12px;
-    }
-
-    .rutina-card h3 {
-        font-size: 18px;
-        padding: 0 10px;
-    }
-
-    .rutina-card p {
-        padding: 0 10px;
-    }
-
-    .rutina-card a {
-        padding: 8px 16px;
-        font-size: 14px;
-        margin: 0 10px 20px 10px;
-    }
-
-    /* TIPS */
-    .seccion-tips h2 {
-        font-size: 24px;
-        padding: 0 10px;
-    }
-
-    .acordeon-titulo {
-        font-size: 18px;
-        padding: 14px 16px;
-    }
-
-    .acordeon-contenido ul {
-        padding: 10px 0;
-        margin: 0 10px;
-    }
-
-    /* CARRUSEL MARCAS */
-    .productos {
-        gap: 10px;
-        padding-left: 10px;
-    }
-
-    .producto {
-        min-width: 100px;
-    }
-
-    .producto img {
-        height: 80px;
-    }
-}

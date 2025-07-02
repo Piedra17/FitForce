@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitForce</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="fotos/banner/favicon 1.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">FitForce</div>
-        <nav>
+    <header class="heade">
+        <div class="logo"><img src="fotos/banner/logo2.png" alt=""></div>
+        <nav class="navbar">
             <button class="menu-toggle" id="toggle-btn"><i class="fas fa-bars"></i></button>
             <ul class="nav-menu">
                 <li><a href="#">Planes/Membresías</a></li>
@@ -38,16 +41,18 @@
     </header>
 
     <section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="fotos/banner/video.mp4" type="video/mp4">
-    Tu navegador no soporta videos HTML5.
-  </video>
+        <video autoplay muted loop playsinline>
+            <source src="fotos/banner/IMG_0022.MOV" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
 
-  <div class="hero-overlay">
-    <h1>Transforma tu cuerpo. Transforma tu vida.</h1>
-    <p>¡Entrena con nosotros y alcanza tu mejor versión!</p>
-  </div>
-</section>
+        <div class="hero-overlay">
+            <h1>Transforma tu cuerpo <br>
+                Transforma tu vida.</h1>
+        </div>
+    </section>
+
+
 
 
 
@@ -88,53 +93,223 @@
     </section>
 
 
+    
+    <!--Calendario-->
+
+    <section class="calen" style="padding-top: 150px;">
+        <h2 class="texto_calendario">Eventos Del Gym</h2>
+
+        <div class="calendar-container">
+            <div id="calendar"></div>
+
+            <div id="event-details">
+                <h3>Eventos del día</h3>
+                <div id="event-list">Haz clic en una fecha</div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!--Blog de tips-->
 
-<section class="seccion-tips">
-  <h2>Potencia tu camino fitness con estos consejos </h2>
+    <section class="seccion-tips">
+        <h2>Potencia tu camino fitness con estos consejos </h2>
 
-  <div class="acordeon">
-    <div class="acordeon-item">
-      <button class="acordeon-titulo">Motivación</button>
-      <div class="acordeon-contenido">
-        <ul>
-          <li>Cómo mantener la disciplina cuando no tienes ganas</li>
-          <li>Historias reales de transformación en nuestro gimnasio</li>
-          <li>Frases motivadoras para cada día de entrenamiento</li>
-          <li>¿Entrenar por estética o por salud? Reflexiona</li>
-        </ul>
-      </div>
-    </div>
+        <div class="acordeon">
+            <div class="acordeon-item">
+                <button class="acordeon-titulo">Motivación</button>
+                <div class="acordeon-contenido">
+                    <ul>
+                        <li>Cómo mantener la disciplina cuando no tienes ganas</li>
+                        <li>Historias reales de transformación en nuestro gimnasio</li>
+                        <li>Frases motivadoras para cada día de entrenamiento</li>
+                        <li>¿Entrenar por estética o por salud? Reflexiona</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="acordeon-item">
-      <button class="acordeon-titulo">Nutrición</button>
-      <div class="acordeon-contenido">
-        <ul>
-          <li>7 desayunos fitness fáciles y rápidos</li>
-          <li>Cómo distribuir tus macros según tu nivel</li>
-          <li>¿Qué comer antes y después del gym?</li>
-          <li>Errores comunes al hacer dieta y cómo evitarlos</li>
-        </ul>
-      </div>
-    </div>
+            <div class="acordeon-item">
+                <button class="acordeon-titulo">Nutrición</button>
+                <div class="acordeon-contenido">
+                    <ul>
+                        <li>7 desayunos fitness fáciles y rápidos</li>
+                        <li>Cómo distribuir tus macros según tu nivel</li>
+                        <li>¿Qué comer antes y después del gym?</li>
+                        <li>Errores comunes al hacer dieta y cómo evitarlos</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="acordeon-item">
-      <button class="acordeon-titulo">Recuperación</button>
-      <div class="acordeon-contenido">
-        <ul>
-          <li>¿Cuántos días descansar según tu rutina?</li>
-          <li>La importancia del sueño en el crecimiento muscular</li>
-          <li>Técnicas de estiramiento post-entreno</li>
-          <li>Cómo evitar y tratar lesiones comunes</li>
-        </ul>
-      </div>
+            <div class="acordeon-item">
+                <button class="acordeon-titulo">Recuperación</button>
+                <div class="acordeon-contenido">
+                    <ul>
+                        <li>¿Cuántos días descansar según tu rutina?</li>
+                        <li>La importancia del sueño en el crecimiento muscular</li>
+                        <li>Técnicas de estiramiento post-entreno</li>
+                        <li>Cómo evitar y tratar lesiones comunes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+<!-- Carrusel de marcas -->
+<section class="carrusel-marcas">
+    <h2>Marcas Destacadas</h2>
+    <div class="carrusel-pista">
+        <div class="productos">
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/gymshark.png" alt="Producto 1">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/cellucor.png" alt="Producto 2">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/alphalete.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/myprotein.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/on.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/dymatize.png" alt="Producto 3">
+            </div>  
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/nike.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/adidas.png" alt="Producto 3">
+            </div>
+
+        <!-- Duplicados para efecto de bucle  -->
+        
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/gymshark.png" alt="Producto 1">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/cellucor.png" alt="Producto 2">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/alphalete.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/myprotein.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/on.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/dymatize.png" alt="Producto 3">
+            </div>  
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/nike.png" alt="Producto 3">
+            </div>
+
+            <div class="card">
+                <div class="bg"></div>
+                <div class="blob"></div>
+                <img src="fotos/carrucel marcas/adidas.png" alt="Producto 3">
+            </div>
+        </div>
     </div>
-  </div>
+</section>
+
+
+<!-- ...contenido anterior -->
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="cta-content fade-in">
+            <h2>Quieres contactarte con nostros</h2>
+            <p>Contáctanos hoy mismo y recibe una respuesta en menos de 24 horas.</p>
+            <a href="#formulario" class="btn-cta">¡Contáctanos!</a>
+        </div>
+        <form class="contact-form fade-in" id="formulario">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
 </section>
 
 
 
-    <!-- Carrusel de marcas
+
+
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+<!-- 🌐 FullCalendar: idioma español -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.min.js"></script>
+
+
+
+<!-- Tu archivo JavaScript personalizado -->
+<script src="js/calendario.js"></script>
+
+    <script src="js/acordeon.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!-- Carrusel de marcas
 <section class="carrusel-marcas">
     <h2>Marcas Destacadas</h2>
     <div class="carrusel-pista">
@@ -189,7 +364,7 @@
 
         Duplicados para efecto de bucle -->
 
-    <!-- 
+<!-- 
             <div class="card">
                 <div class="bg"></div>
                 <div class="blob"></div>
@@ -240,11 +415,3 @@
         </div>
     </div>
 </section> -->
-
-
-
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
