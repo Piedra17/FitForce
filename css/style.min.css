@@ -132,15 +132,20 @@
     }
 
     .hero-overlay h1 {
-    font-family: 'Tourney', sans-serif;
-    font-size: 100px;
-    font-weight: 100;
-    color: white; /* ⬅️ ahora es visible */
-    text-shadow: none;
-    background: none;
-    -webkit-font-smoothing: antialiased;
-    margin-bottom: 15px;
-}
+        font-family: 'Tourney', sans-serif;
+        font-size: 100px;
+        font-weight: 100;
+        color: transparent ;
+        /* Elimina el relleno */
+        -webkit-text-stroke: 1px #fff;
+        /* Solo borde blanco */
+        text-shadow: none;
+        /* Asegúrate de que no haya sombra que lo haga parecer relleno */
+        background: none;
+        -webkit-font-smoothing: antialiased;
+        /* Mejora visual del trazo */
+        margin-bottom: 15px;
+    }
 
 
     /*Cards rutinas*/
