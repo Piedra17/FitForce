@@ -1,346 +1,354 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Entrena en FitForce: gimnasio moderno con entrenadores expertos, clases funcionales y el mejor ambiente para lograr tus objetivos. ¡Únete hoy!">
-    <title>FitForce</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="fotos/banner/favicon 1.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" href="css/responsive.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Entrena en FitForce: gimnasio moderno con entrenadores expertos, clases funcionales y el mejor ambiente para lograr tus objetivos. ¡Únete hoy!">
+  <title>FitForce</title>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet';">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap"></noscript>
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css"></noscript>
+
+  <link rel="shortcut icon" href="fotos/banner/favicon 1.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/responsive.min.css">
 </head>
 
 <body>
-    <header class="heade">
-        <div class="logo"><a href="index.html"><img src="fotos/banner/logo2.png" alt="logo oficial de Fit Force"></a></div>
-        <nav class="navbar">
-            <button class="menu-toggle" id="toggle-btn"><i class="fas fa-bars"></i></button>
-            <ul class="nav-menu">
-                <li><a href="#">Membresías</a></li>
-                <li><a href="rutinas.html">Rutinas</a></li>
-                <li><a href="nutricion.html">Nutrición</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Planes nutricionales mesuales</a></li>
-                        <li><a href="#">Recetas fitness</a></li>
-                        <li><a href="#">Suplementación</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Galería</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero-video">
-        <video autoplay muted loop playsinline>
-            <source src="fotos/banner/IMG_0022.MOV" type="video/mp4">
-        </video>
-
-        <div class="hero-overlay">
-            <h1>Transforma tu cuerpo <br>Transforma tu vida.</h1>
-        </div>
-    </section>
-
-
-
-
-
-
-
-    <section class="rutinas-banner">
-        <h2>Encuentra la rutina perfecta para tu nivel</h2>
-        <div class="rutinas-grid">
-            <!-- Básico -->
-            <div class="borde">
-                <div class="rutina-card nivel-basico">
-                    <img src="fotos/rutinas/principiante.png" alt="Rutina básica">
-                    <h3>BÁSICO</h3>
-                    <p>Rutinas simples y de iniciación</p>
-                    <a href="#">Ver rutina</a>
-                </div>
-            </div>
-
-            <!-- Intermedio -->
-            <div class="borde">
-                <div class="rutina-card nivel-intermedio">
-                    <img src="fotos/rutinas/intermedio.png" alt="Rutina intermedia">
-                    <h3>INTERMEDIO</h3>
-                    <p>Más fuerza y progreso claro</p>
-                    <a href="#">Ver rutina</a>
-                </div>
-            </div>
-            <!-- Avanzado -->
-            <div class="borde">
-                <div class="rutina-card nivel-avanzado">
-                    <img src="fotos/rutinas/avanzado.png" alt="Rutina avanzada">
-                    <h3>AVANZADO</h3>
-                    <p>Alta intensidad y técnica</p>
-                    <a href="#">Ver rutina</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    
-    <!--Calendario-->
-
-    <section class="calen" style="padding-top: 150px;">
-        <h2 class="texto_calendario">Eventos Del Gym</h2>
-
-        <div class="calendar-container">
-            <div id="calendar"></div>
-
-            <div id="event-details">
-                <h3>Eventos del día</h3>
-                <div id="event-list">Haz clic en una fecha</div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!--Zonas del Gym-->
-<section class="zonas">
-  <h2 class="titulozonas">Viví la Experiencia de Fit Force</h2>
-  <p class="subtitulo">Tecnología de punta y las mejores instalaciones</p>
-
-  <div class="cards-container">
-    <div class="card-zonas">
-      <img src="fotos/banner/tecnologia.webp" alt="Equipos de última tecnología">
-      <h3>Equipos de última tecnología</h3>
-    </div>
-
-    <div class="card-zonas">
-      <img src="fotos/banner/salones.webp" alt="Salones grupales">
-      <h3>Salones grupales</h3>
-    </div>
-
-    <div class="card-zonas">
-      <img src="fotos/banner/cardio.webp" alt="Zonas de cardio y musculación">
-      <h3>Zonas de cardio y musculación</h3>
-    </div>
-  </div>
-
-  <div class="btn-zonas">
-    <a href="#">Inscribirse</a>
-  </div>
-</section>
-
-
-
-
-<!-- App Fit Force -->
-<section class="app-fitforce">
-  <div class="contenido-app">
-    
-
-    <div class="texto-app">
-      
-      <h2>Fit Force App</h2>
-      <p class="slogan">Una experiencia de entrenamiento completa, dentro y fuera del gimnasio.</p>
-      <p>No importa si ya tenés experiencia o si recién estás comenzando a entrenar, una cosa es segura:</p>
-      <p>¡Al descargar gratis la aplicación <strong>Fit Force</strong>, obtenés el mejor aliado para tu rutina de entrenamiento!</p>
-        <img src="fotos/banner/logo2.png" alt="Logo Fit Force" class="logo-app">
-      <div class="botones-app">
-        <a href="https://play.google.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponible en Google Play">
-        </a>
-        <a href="https://www.apple.com/app-store/" target="_blank">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Disponible en App Store">
-        </a>
-      </div>
-    </div>
-</section>
-
-
-    
-<!-- Carrusel de marcas -->
-<section class="carrusel-marcas">
-    <h2>Marcas Destacadas</h2>
-    <div class="carrusel-pista">
-        <div class="productos">
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/gymshark.png" alt="gymshark-logo">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/cellucor.png" alt="cellucor-logo">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/alphalete.png" alt="alphalete-logo">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/myprotein.png" alt="myprotein-logo">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/on.png" alt="on-logo">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/dymatize.png" alt="dymatize-logo">
-            </div>  
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/nike.png" alt="nike-logo">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/adidas.png" alt="adidas-logo">
-            </div>
-
-        <!-- Duplicados para efecto de bucle  -->
-        
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/gymshark.png" alt="gymshark-logo-2">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/cellucor.png" alt="cellucor-logo-2">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/alphalete.png" alt="alphalete-logo-2">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/myprotein.png" alt="myprotein-logo-2">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/on.png" alt="on-logo-2">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/dymatize.png" alt="dymatize-logo-2">
-            </div>  
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/nike.png" alt="nike-logo-2">
-            </div>
-
-            <div class="card">
-                <div class="bg"></div>
-                <div class="blob"></div>
-                <img src="fotos/carrucel marcas/adidas.png" alt="adidas-logo-2">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section class="contact-section">
-  <div class="contact-container">
-    <div class="cta-content fade-in">
-      <h2 class="contacto-h2">¿Querés contactarte con nosotros?</h2>
-      <p class="parrafo-exto">Contáctanos hoy mismo y recibí una respuesta en menos de 24 horas.</p>
-    </div>
-
-    <form class="contact-form fade-in" id="formulario">
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu correo electrónico" required />
-      <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
-
-      <!-- Botón dentro del formulario -->
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </div>
-</section>
-
-
-
-<footer class="footer">
-  <div class="footer-container">
-    
-    <div class="footer-logo">
-      <img src="fotos/banner/logo2.png" alt="FitForce Logo">
-    </div>
-
-    <div class="footer-links">
-      <ul>
+  <header class="heade">
+    <div class="logo"><a href="index.html"><img src="fotos/banner/logo2.png" alt="logo oficial de Fit Force"></a></div>
+    <nav class="navbar">
+      <button class="menu-toggle" id="toggle-btn"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu">
         <li><a href="#">Membresías</a></li>
         <li><a href="rutinas.html">Rutinas</a></li>
-        <li><a href="nutricion.html">Nutrición</a></li>
-        <li><a href="#">Galería</a></li>
+        <li><a href="nutricion.html">Nutrición</a>
+          <ul class="dropdown">
+            <li><a href="#">Planes nutricionales mesuales</a></li>
+            <li><a href="#">Recetas fitness</a></li>
+            <li><a href="#">Suplementación</a></li>
+          </ul>
+        </li>
         <li><a href="#">Contacto</a></li>
       </ul>
-    </div>
+    </nav>
+  </header>
 
-    <div class="footer-social">
-      <h4>Seguinos en:</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="fotos/banner/video-banner.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay">
+      <h1>Transforma tu cuerpo <br>Transforma tu vida.</h1>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="rutinas-banner">
+    <h2>Encuentra la rutina perfecta para tu nivel</h2>
+    <div class="rutinas-grid">
+      <!-- Básico -->
+      <div class="borde">
+        <div class="rutina-card nivel-basico">
+          <img src="fotos/rutinas/principiante.png" alt="Rutina básica">
+          <h3>BÁSICO</h3>
+          <p>Rutinas simples y de iniciación</p>
+          <a href="#">Ver rutina</a>
+        </div>
+      </div>
+
+      <!-- Intermedio -->
+      <div class="borde">
+        <div class="rutina-card nivel-intermedio">
+          <img src="fotos/rutinas/intermedio.png" alt="Rutina intermedia">
+          <h3>INTERMEDIO</h3>
+          <p>Más fuerza y progreso claro</p>
+          <a href="#">Ver rutina</a>
+        </div>
+      </div>
+      <!-- Avanzado -->
+      <div class="borde">
+        <div class="rutina-card nivel-avanzado">
+          <img src="fotos/rutinas/avanzado.png" alt="Rutina avanzada">
+          <h3>AVANZADO</h3>
+          <p>Alta intensidad y técnica</p>
+          <a href="#">Ver rutina</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 FitForce. Todos los derechos reservados.</p>
-  </div>
-</footer>
+  </section>
 
 
 
+  <!--Calendario-->
+
+  <section class="calen" style="padding-top: 150px;">
+    <h2 class="texto_calendario">Eventos Del Gym</h2>
+
+    <div class="calendar-container">
+      <div id="calendar"></div>
+
+      <div id="event-details">
+        <h3>Eventos del día</h3>
+        <div id="event-list">Haz clic en una fecha</div>
+      </div>
+    </div>
+  </section>
 
 
-<!-- FullCalendar JS -->
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
-<!-- 🌐 FullCalendar: idioma español -->
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.min.js"></script>
+  <!--Zonas del Gym-->
+  <section class="zonas">
+    <h2 class="titulozonas">Viví la Experiencia de Fit Force</h2>
+    <p class="subtitulo">Tecnología de punta y las mejores instalaciones</p>
+
+    <div class="cards-container">
+      <div class="card-zonas">
+        <img src="fotos/banner/tecnologia.webp" alt="Equipos de última tecnología">
+        <h3>Equipos de última tecnología</h3>
+      </div>
+
+      <div class="card-zonas">
+        <img src="fotos/banner/salones.webp" alt="Salones grupales">
+        <h3>Salones grupales</h3>
+      </div>
+
+      <div class="card-zonas">
+        <img src="fotos/banner/cardio.webp" alt="Zonas de cardio y musculación">
+        <h3>Zonas de cardio y musculación</h3>
+      </div>
+    </div>
+
+    <div class="btn-zonas">
+      <a href="#">Inscribirse</a>
+    </div>
+  </section>
 
 
 
-<!-- Tu archivo JavaScript personalizado -->
-<script src="js/calendario.js"></script>
 
-    <script src="js/acordeon.js"></script>
-    <script src="js/script.js"></script>
+  <!-- App Fit Force -->
+  <section class="app-fitforce">
+    <div class="contenido-app">
+
+
+      <div class="texto-app">
+
+        <h2>Fit Force App</h2>
+        <p class="slogan">Una experiencia de entrenamiento completa, dentro y fuera del gimnasio.</p>
+        <p>No importa si ya tenés experiencia o si recién estás comenzando a entrenar, una cosa es segura:</p>
+        <p>¡Al descargar gratis la aplicación <strong>Fit Force</strong>, obtenés el mejor aliado para tu rutina de
+          entrenamiento!</p>
+        <img src="fotos/banner/logo2.png" alt="Logo Fit Force" class="logo-app">
+        <div class="botones-app">
+          <a href="https://play.google.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Disponible en Google Play">
+          </a>
+          <a href="https://www.apple.com/app-store/" target="_blank">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Disponible en App Store">
+          </a>
+        </div>
+      </div>
+  </section>
+
+
+
+  <!-- Carrusel de marcas -->
+  <section class="carrusel-marcas">
+    <h2>Marcas Destacadas</h2>
+    <div class="carrusel-pista">
+      <div class="productos">
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/gymshark.png" alt="gymshark-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/cellucor.png" alt="cellucor-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/alphalete.png" alt="alphalete-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/myprotein.png" alt="myprotein-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/on.png" alt="on-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/dymatize.png" alt="dymatize-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/nike.png" alt="nike-logo">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/adidas.png" alt="adidas-logo">
+        </div>
+
+        <!-- Duplicados para efecto de bucle  -->
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/gymshark.png" alt="gymshark-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/cellucor.png" alt="cellucor-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/alphalete.png" alt="alphalete-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/myprotein.png" alt="myprotein-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/on.png" alt="on-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/dymatize.png" alt="dymatize-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/nike.png" alt="nike-logo-2">
+        </div>
+
+        <div class="card">
+          <div class="bg"></div>
+          <div class="blob"></div>
+          <img src="fotos/carrucel marcas/adidas.png" alt="adidas-logo-2">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="cta-content fade-in">
+        <h2 class="contacto-h2">¿Querés contactarte con nosotros?</h2>
+        <p class="parrafo-exto">Contáctanos hoy mismo y recibí una respuesta en menos de 24 horas.</p>
+      </div>
+
+      <form class="contact-form fade-in" id="formulario">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+
+        <!-- Botón dentro del formulario -->
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        <img src="fotos/banner/logo2.png" alt="FitForce Logo">
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Membresías</a></li>
+          <li><a href="rutinas.html">Rutinas</a></li>
+          <li><a href="nutricion.html">Nutrición</a></li>
+          <li><a href="#">Galería</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Seguinos en:</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FitForce. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+  <!-- 🌐 FullCalendar: idioma español -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales-all.min.js"></script>
+
+
+
+  <!-- Tu archivo JavaScript personalizado -->
+  <script src="js/calendario.js"></script>
+
+  <script src="js/acordeon.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
-
-
-
