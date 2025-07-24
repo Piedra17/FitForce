@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitForce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="fotos/banner/favicon 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nutricion.css">
+</head>
+
+<body>
+    <header class="heade">
+        <div class="logo"><a href="index.html"><img src="fotos/banner/logo2.png" alt=""></a></div>
+        <nav class="navbar">
+            <button class="menu-toggle" id="toggle-btn"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="#">Membresías</a></li>
+                <li><a href="rutinas.html">Rutinas</a>
+                </li>
+                <li><a href="nutricion.html">Nutrición</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Planes nutricionales mesuales</a></li>
+                        <li><a href="#">Recetas fitness</a></li>
+                        <li><a href="#">Suplementación</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-gym">
+    <h1>¡Alimentá tu cuerpo, transformá tu vida!</h1>
+  </section>
+
+
+
+  <section class="planes-alimentacion">
+  <h2 class="planes-h2">Planes de Alimentación</h2>
+  <div class="planes">
+    <div class="plan">
+      <img src="/fotos/nutricion/perderpeso.jpg" alt="Perder peso">
+      <h3>Perder grasa</h3>
+      <p>Reducí calorías sin perder energía. Planes balanceados para verte y sentirte bien.</p>
+      <div class="boton">
+        <a href="https://www.mayoclinic.org/es/healthy-lifestyle/weight-loss/in-depth/weight-loss/art-20047752" target="_blank" class="btn-saludable">Ver Más</a>
+      </div>
+    </div>
+    <div class="plan">
+      <img src="/fotos/nutricion/ganarmasa.jpg" alt="Ganar músculo">
+      <h3>Ganar masa muscular</h3>
+      <p>Aumentá tu ingesta con comidas ricas en proteína y nutrientes.</p>
+      <div class="boton">
+        <a href="https://nutrisanacr.com/planes-nutricionales/?gad_source=1&gad_campaignid=20552182299&gbraid=0AAAAAqPGm7Mdd43oRFQFx7gFghixsT7d8&gclid=EAIaIQobChMIgf_IpI_TjgMVx3FHAR1DdTrPEAAYASAAEgJsQ_D_BwE" target="_blank" class="btn-saludable">Ver Más</a>
+      </div>
+    </div>
+    <div class="plan">
+      <img src="/fotos/nutricion/mantenermesaludable.jpg" alt="Mantenerse saludable">
+      <h3>Mantenerte saludable</h3>
+      <p>Comé con equilibrio para sentirte fuerte y activo todos los días.</p>
+      <div class="boton">
+        <a href="https://medlineplus.gov/spanish/ency/article/002393.htm" target="_blank" class="btn-saludable">Ver Más</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="recetas">
+  <h2>Recetas Fitness Fáciles</h2>
+
+  <!-- Filtros -->
+  <div class="filtros">
+    <button onclick="filtrarRecetas('todas')">Todas</button>
+    <button onclick="filtrarRecetas('desayuno')">Desayuno</button>
+    <button onclick="filtrarRecetas('post-entreno')">Post-entreno</button>
+    <button onclick="filtrarRecetas('proteica')">Alta en proteína</button>
+  </div>
+
+  <!-- Recetas -->
+  <div class="receta-grid">
+    <div class="receta" data-categoria="desayuno proteica">
+      <video src="/videos/recetas/pancakes-avena.mp4" controls></video>
+      <h3>Pancakes de avena y banana</h3>
+    </div>
+
+    <div class="receta" data-categoria="post-entreno">
+      <img src="/fotos/recetas/smoothie-verde.webp" alt="Smoothie verde">
+      <h3>Smoothie verde post-entreno</h3>
+    </div>
+
+    <div class="receta" data-categoria="proteica almuerzo">
+      <img src="/fotos/recetas/bowl-pollo.webp" alt="Bowl proteico">
+      <h3>Bowl proteico con pollo y arroz</h3>
+    </div>
+  </div>
+</section>
+<script>
+  function filtrarRecetas(categoria) {
+    const recetas = document.querySelectorAll('.receta');
+
+    recetas.forEach(receta => {
+      const categorias = receta.getAttribute('data-categoria');
+
+      if (categoria === 'todas' || categorias.includes(categoria)) {
+        receta.style.display = 'block';
+      } else {
+        receta.style.display = 'none';
+      }
+    });
+  }
+</script>
+

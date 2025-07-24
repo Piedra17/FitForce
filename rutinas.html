@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitForce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="fotos/banner/favicon 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/rutinas.css">
+</head>
+
+<body>
+    <header class="heade">
+        <div class="logo"><a href="index.html"><img src="fotos/banner/logo2.png" alt=""></a></div>
+        <nav class="navbar">
+            <button class="menu-toggle" id="toggle-btn"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="#">Membresías</a></li>
+                <li><a href="rutinas.html">Rutinas</a>
+                </li>
+                <li><a href="nutricion.html">Nutrición</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Planes nutricionales mesuales</a></li>
+                        <li><a href="#">Recetas fitness</a></li>
+                        <li><a href="#">Suplementación</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-gym">
+    <h1>¡Transforma tu cuerpo, supera tus límites!</h1>
+  </section>
+
+    <section class="seccion-planes">
+  <h2>Planes de Entrenamiento</h2>
+  <div class="planes-container">
+
+    <!-- PRINCIPIANTE -->
+    <div class="plan-card">
+      <img src="fotos/rutinas/pexels-hugazoboss-19132571.jpg" alt="Plan Principiante">
+      <div class="plan-content">
+        <h3>Principiante</h3>
+        <p>Ideal para quienes comienzan. Rutinas básicas con peso corporal y máquinas para una buena adaptación.</p>
+        <a href="pdf/Plan_principiante.pdf" class="btn-descargar" download> Descargar PDF</a>
+      </div>
+    </div>
+
+    <!-- INTERMEDIO -->
+    <div class="plan-card">
+      <img src="fotos/rutinas/pexels-angel-ayala-321556-27903366.jpg" alt="Plan Intermedio">
+      <div class="plan-content">
+        <h3>Intermedio</h3>
+        <p>Para quienes ya tienen una base sólida. Incluye ejercicios con mancuernas y rutinas divididas.</p>
+        <a href="pdf/Plan_intermedio.pdf" class="btn-descargar" download> Descargar PDF</a>
+      </div>
+    </div>
+
+    <!-- AVANZADO -->
+    <div class="plan-card">
+      <img src="fotos/rutinas/pexels-amar-14673249.jpg" alt="Plan Avanzado">
+      <div class="plan-content">
+        <h3>Avanzado</h3>
+        <p>Entrenamiento de alto nivel. Incluye ejercicios multiarticulares, técnicas avanzadas y más intensidad.</p>
+        <a href="pdf/Plan_avanzado.pdf" class="btn-descargar" download> Descargar PDF</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="planes-rutinas">
+  <h2>Elige tu rutina ideal</h2>
+  <p>Rutinas diseñadas para todos los niveles y objetivos. Encontrá la que te motive a dar el siguiente paso.</p>
+
+  <div class="cards-container">
+    <div class="card">
+      <h3>Principiantes</h3>
+      <p>Adaptación y técnica para quienes recién empiezan a entrenar.</p>
+      <button data-modal="modal1">Ver rutina</button>
+    </div>
+
+    <div class="card">
+      <h3>Intermedios</h3>
+      <p>Entrenamientos para aumentar fuerza y resistencia.</p>
+      <button data-modal="modal2">Ver rutina</button>
+    </div>
+
+    <div class="card">
+      <h3>Avanzados</h3>
+      <p>Rutinas intensas para optimizar rendimiento y masa muscular.</p>
+      <button data-modal="modal3">Ver rutina</button>
+    </div>
+
+    <div class="card">
+      <h3>Perder peso</h3>
+      <p>Ejercicios enfocados en quemar grasa y mejorar la condición física.</p>
+      <button data-modal="modal4">Ver rutina</button>
+    </div>
+
+    <div class="card">
+      <h3>Ganar músculo</h3>
+      <p>Entrenamientos diseñados para hipertrofia y fuerza máxima.</p>
+      <button data-modal="modal5">Ver rutina</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modales -->
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Rutina Principiantes</h3>
+    <p>Esta rutina está pensada para quienes recién comienzan. Incluye ejercicios básicos con enfoque en la técnica y la adaptación progresiva. Perfecta para construir una base sólida y evitar lesiones.</p>
+    <ul>
+      <li>Duración: 4 semanas</li>
+      <li>Frecuencia: 3 veces por semana</li>
+      <li>Ejercicios: Sentadillas, flexiones modificadas, planchas, caminatas</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Rutina Intermedios</h3>
+    <p>Para quienes ya tienen experiencia y quieren aumentar fuerza y resistencia. Incluye más volumen e intensidad, con ejercicios compuestos y trabajo cardiovascular.</p>
+    <ul>
+      <li>Duración: 6 semanas</li>
+      <li>Frecuencia: 4-5 veces por semana</li>
+      <li>Ejercicios: Peso muerto, press de banca, burpees, sprints</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Rutina Avanzados</h3>
+    <p>Entrenamientos para optimizar rendimiento y masa muscular, con alta intensidad y técnicas avanzadas. Ideal para atletas o entusiastas.</p>
+    <ul>
+      <li>Duración: 8 semanas</li>
+      <li>Frecuencia: 5-6 veces por semana</li>
+      <li>Ejercicios: Sentadillas con barra, press militar, entrenamiento en circuito, pliometría</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Rutina para Perder peso</h3>
+    <p>Ejercicios diseñados para maximizar la quema de grasa y mejorar la condición física general, combinando cardio y fuerza.</p>
+    <ul>
+      <li>Duración: 6 semanas</li>
+      <li>Frecuencia: 5 veces por semana</li>
+      <li>Ejercicios: HIIT, circuitos funcionales, salto de cuerda, abdominales</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Rutina para Ganar músculo</h3>
+    <p>Entrenamientos enfocados en hipertrofia muscular con énfasis en la progresión y volumen para maximizar la ganancia de masa.</p>
+    <ul>
+      <li>Duración: 8 semanas</li>
+      <li>Frecuencia: 5-6 veces por semana</li>
+      <li>Ejercicios: Press banca, sentadillas, remo, curl bíceps, dips</li>
+    </ul>
+  </div>
+</div>
+
+
+<section class="historias">
+  <h2>Historias que Inspiran</h2>
+  <p>Descubrí cómo el esfuerzo y la constancia cambian vidas. Estas personas transformaron su cuerpo y su mente, ¡vos también podés!</p>
+
+  <div class="videos-container">
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/Cll4EITbUvU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/1TrX91UeiH0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-card">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/th6bih9JVcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script src="js/modales.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

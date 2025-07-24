@@ -13,21 +13,14 @@
 </head>
 
 <body>
-
     <header class="heade">
-        <div class="logo"><img src="fotos/banner/logo2.png" alt=""></div>
+        <div class="logo"><a href="index.html"><img src="fotos/banner/logo2.png" alt=""></a></div>
         <nav class="navbar">
             <button class="menu-toggle" id="toggle-btn"><i class="fas fa-bars"></i></button>
             <ul class="nav-menu">
-                <li><a href="#">Planes/Membresías</a></li>
-                <li><a href="#">Rutinas</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Principiante</a></li>
-                        <li><a href="#">Intermedio</a></li>
-                        <li><a href="#">Avanzado</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Nutrición</a>
+                <li><a href="#">Membresías</a></li>
+                <li><a href="rutinas.html">Rutinas</a></li>
+                <li><a href="nutricion.html">Nutrición</a>
                     <ul class="dropdown">
                         <li><a href="#">Planes nutricionales mesuales</a></li>
                         <li><a href="#">Recetas fitness</a></li>
@@ -111,49 +104,58 @@
 
 
 
-    <!--Blog de tips-->
+    <!--Zonas del Gym-->
+<section class="zonas">
+  <h2 class="titulozonas">Viví la Experiencia de Fit Force</h2>
+  <p class="subtitulo">Tecnología de punta y las mejores instalaciones</p>
 
-    <section class="seccion-tips">
-        <h2>Potencia tu camino fitness con estos consejos </h2>
+  <div class="cards-container">
+    <div class="card-zonas">
+      <img src="fotos/banner/tecnologia.webp" alt="Equipos de última tecnología">
+      <h3>Equipos de última tecnología</h3>
+    </div>
 
-        <div class="acordeon">
-            <div class="acordeon-item">
-                <button class="acordeon-titulo">Motivación</button>
-                <div class="acordeon-contenido">
-                    <ul>
-                        <li>Cómo mantener la disciplina cuando no tienes ganas</li>
-                        <li>Historias reales de transformación en nuestro gimnasio</li>
-                        <li>Frases motivadoras para cada día de entrenamiento</li>
-                        <li>¿Entrenar por estética o por salud? Reflexiona</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="card-zonas">
+      <img src="fotos/banner/salones.webp" alt="Salones grupales">
+      <h3>Salones grupales</h3>
+    </div>
 
-            <div class="acordeon-item">
-                <button class="acordeon-titulo">Nutrición</button>
-                <div class="acordeon-contenido">
-                    <ul>
-                        <li>7 desayunos fitness fáciles y rápidos</li>
-                        <li>Cómo distribuir tus macros según tu nivel</li>
-                        <li>¿Qué comer antes y después del gym?</li>
-                        <li>Errores comunes al hacer dieta y cómo evitarlos</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="card-zonas">
+      <img src="fotos/banner/cardio.webp" alt="Zonas de cardio y musculación">
+      <h3>Zonas de cardio y musculación</h3>
+    </div>
+  </div>
 
-            <div class="acordeon-item">
-                <button class="acordeon-titulo">Recuperación</button>
-                <div class="acordeon-contenido">
-                    <ul>
-                        <li>¿Cuántos días descansar según tu rutina?</li>
-                        <li>La importancia del sueño en el crecimiento muscular</li>
-                        <li>Técnicas de estiramiento post-entreno</li>
-                        <li>Cómo evitar y tratar lesiones comunes</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="btn-zonas">
+    <a href="#">Inscribirse</a>
+  </div>
+</section>
+
+
+
+
+<!-- App Fit Force -->
+<section class="app-fitforce">
+  <div class="contenido-app">
+    
+
+    <div class="texto-app">
+      
+      <h2>Fit Force App</h2>
+      <p class="slogan">Una experiencia de entrenamiento completa, dentro y fuera del gimnasio.</p>
+      <p>No importa si ya tenés experiencia o si recién estás comenzando a entrenar, una cosa es segura:</p>
+      <p>¡Al descargar gratis la aplicación <strong>Fit Force</strong>, obtenés el mejor aliado para tu rutina de entrenamiento!</p>
+        <img src="fotos/banner/logo2.png" alt="Logo Fit Force" class="logo-app">
+      <div class="botones-app">
+        <a href="https://play.google.com/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponible en Google Play">
+        </a>
+        <a href="https://www.apple.com/app-store/" target="_blank">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Disponible en App Store">
+        </a>
+      </div>
+    </div>
+</section>
 
 
     
@@ -264,14 +266,14 @@
 </section>
 
 
-<!-- ...contenido anterior -->
+
+
 
 <section class="contact-section">
     <div class="contact-container">
         <div class="cta-content fade-in">
             <h2>Quieres contactarte con nostros</h2>
             <p>Contáctanos hoy mismo y recibe una respuesta en menos de 24 horas.</p>
-            <a href="#formulario" class="btn-cta">¡Contáctanos!</a>
         </div>
         <form class="contact-form fade-in" id="formulario">
             <input type="text" name="nombre" placeholder="Tu nombre" required />
@@ -281,6 +283,42 @@
         </form>
     </div>
 </section>
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-logo">
+      <img src="fotos/banner/logo2.png" alt="FitForce Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Membresías</a></li>
+        <li><a href="rutinas.html">Rutinas</a></li>
+        <li><a href="nutricion.html">Nutrición</a></li>
+        <li><a href="#">Galería</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Seguinos en:</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 FitForce. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
 
 
