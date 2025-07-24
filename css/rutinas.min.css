@@ -1,0 +1,300 @@
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+ 
+     .banner-gym {
+      background-image: url('/fotos/rutinas/baneer.webp');
+      background-size: cover;
+      width: 100%;
+      background-position: center 100px;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-gym h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 900px;
+    }
+ 
+ 
+ .seccion-planes {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .seccion-planes h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #fff;
+      padding-top: 100px;
+    }
+
+    .planes-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .plan-card {
+      background-color: rgb(71, 71, 71);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .plan-card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .plan-content {
+      padding: 20px;
+    }
+
+    .plan-content h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .plan-content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .btn-descargar {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      align-items: center;
+    }
+
+    .btn-descargar:hover {
+      background-color: blue;
+    }
+
+    .historias {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    height: 90vh;
+  }
+
+  .historias h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    padding-top: 200px;
+  }
+
+  .historias p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #fff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .video-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+  }
+
+  .video-card iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .video-card h3 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #222;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+   .planes-rutinas {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .planes-rutinas h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .planes-rutinas p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #fff;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background-color: #f2f2f2;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px 20px;
+      width: 280px;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .card button {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: lightskyblue;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .modal-content p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: blue;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      background: lightskyblue;
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+

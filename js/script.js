@@ -1,4 +1,16 @@
+  const toggleBtn = document.getElementById('toggle-btn');
+  const navMenu = document.querySelector('.nav-menu');
 
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Opcional: cerrar menú si se hace clic fuera del menú cuando está abierto
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".heade");
